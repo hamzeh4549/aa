@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maxim Native Web</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div id="map"></div>
+
+    <header id="header">
+        <div class="origin-dest">
+            <div id="originText">مبدا: انتخاب نشده</div>
+            <div id="destText">مقصد: انتخاب نشده</div>
+        </div>
+        <div class="profile-info">
+            <div id="avgRating" class="rating-box">⭐ 0.0</div>
+            <div id="userLevel" class="user-level">سطح: برنز</div>
+        </div>
+    </header>
+
+    <section id="panel" class="bottom-panel">
+        <div id="originInput" class="input-box active">مبدا: روی نقشه انتخاب کنید</div>
+        <div id="destInput" class="input-box">مقصد: بعد از انتخاب مبدا</div>
+
+        <div id="resultBox" class="result-box">
+            <div id="priceDisplay" class="price-box">قیمت: -</div>
+            <div id="distanceDisplay" class="small">مسافت: -</div>
+            <div id="timeDisplay" class="small">زمان: -</div>
+            <button id="requestBtn" class="req-btn">درخواست ماشین</button>
+        </div>
+    </section>
+
+    <section id="driverCard" class="driver-card">
+        <div id="carPhoto">🚗</div>
+        <div>
+            <div id="driverName" class="driver-name">—</div>
+            <div id="driverEta" class="driver-eta">—</div>
+        </div>
+    </section>
+
+    <section id="ratingModal" class="rating-modal">
+        <div class="rating-box2">
+            <h3>امتیاز به راننده</h3>
+            <div id="stars" class="stars">
+                <span data-value="1">☆</span>
+                <span data-value="2">☆</span>
+                <span data-value="3">☆</span>
+                <span data-value="4">☆</span>
+                <span data-value="5">☆</span>
+            </div>
+            <button id="sendRating" class="req-btn">ارسال</button>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
